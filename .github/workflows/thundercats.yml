@@ -7,8 +7,8 @@ jobs:
     name: scratch code-base
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/main
+      - name: say hello
+        run: echo 'Hello All'
         
       - name: Run thundercats
         uses: github/javaapp-opstree
