@@ -1,0 +1,17 @@
+name: thundercats
+
+on: push
+
+jobs:
+  tygra:
+    name: scratch code-base
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Run thundercats
+        uses: github/thundercats@v3
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
